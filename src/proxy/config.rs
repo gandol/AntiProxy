@@ -90,7 +90,7 @@ pub struct UpstreamProxyConfig {
 }
 
 fn default_user_agent() -> String {
-    "antigravity/1.18.8 windows/amd64".to_string()
+    "antigravity/1.15.8 windows/amd64".to_string()
 }
 
 impl Default for UpstreamProxyConfig {

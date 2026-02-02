@@ -25,7 +25,7 @@ impl UpstreamClient {
             .as_ref()
             .map(|c| c.user_agent.clone())
             .filter(|ua| !ua.is_empty())
-            .unwrap_or_else(|| "antigravity/1.13.3 darwin/arm64".to_string());
+            .unwrap_or_else(|| "antigravity/1.15.8 darwin/arm64".to_string());
 
         let mut builder = Client::builder()
             // Connection settings (optimize connection reuse, reduce overhead)
@@ -129,7 +129,7 @@ impl UpstreamClient {
         headers.insert(
             header::USER_AGENT,
             header::HeaderValue::from_str(&self.user_agent)
-                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.18.8 windows/amd64")),
+                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.15.8 windows/amd64")),
         );
 
         let mut last_err: Option<String> = None;
@@ -240,7 +240,7 @@ impl UpstreamClient {
         headers.insert(
             header::USER_AGENT,
             header::HeaderValue::from_str(&self.user_agent)
-                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.18.8 windows/amd64")),
+                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.15.8 windows/amd64")),
         );
 
         let mut last_err: Option<String> = None;

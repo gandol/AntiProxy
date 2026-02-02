@@ -61,7 +61,7 @@ async fn fetch_project_id(access_token: &str, email: &str) -> (Option<String>, O
         .post(format!("{}/v1internal:loadCodeAssist", CLOUD_CODE_BASE_URL))
         .header(reqwest::header::AUTHORIZATION, format!("Bearer {}", access_token))
         .header(reqwest::header::CONTENT_TYPE, "application/json")
-        .header(reqwest::header::USER_AGENT, "antigravity/windows/amd64")
+        .header(reqwest::header::USER_AGENT, "antigravity/1.15.8 windows/amd64")
         .json(&meta)
         .send()
         .await;
