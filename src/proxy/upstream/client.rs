@@ -129,7 +129,7 @@ impl UpstreamClient {
         headers.insert(
             header::USER_AGENT,
             header::HeaderValue::from_str(&self.user_agent)
-                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.11.9 windows/amd64")),
+                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.18.8 windows/amd64")),
         );
 
         let mut last_err: Option<String> = None;
@@ -240,7 +240,7 @@ impl UpstreamClient {
         headers.insert(
             header::USER_AGENT,
             header::HeaderValue::from_str(&self.user_agent)
-                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.11.9 windows/amd64")),
+                .unwrap_or_else(|_| header::HeaderValue::from_static("antigravity/1.18.8 windows/amd64")),
         );
 
         let mut last_err: Option<String> = None;

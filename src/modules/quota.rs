@@ -4,7 +4,7 @@ use serde_json::json;
 use crate::models::QuotaData;
 
 const QUOTA_API_URL: &str = "https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels";
-const USER_AGENT: &str = "antigravity/1.11.3 Darwin/arm64";
+const USER_AGENT: &str = "antigravity/1.15.8 Darwin/arm64";
 
 #[derive(Debug, Serialize, Deserialize)]
 struct QuotaResponse {
