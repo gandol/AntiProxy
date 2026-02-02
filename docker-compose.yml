@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  antiproxy:
+    build: .
+    container_name: antiproxy
+    ports:
+      - "8046:8045"
+    environment:
+      - ANTI_PROXY_BIND=0.0.0.0
+      - ANTI_PROXY_ALLOW_LAN=1
+    volumes:
+      - antiproxy-data:/root/.AntiProxy
+    restart: unless-stopped
+
+volumes:
+  antiproxy-data:
